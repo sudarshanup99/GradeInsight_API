@@ -9,7 +9,7 @@
         public required DateTime CollegeEnrollmentDate { get; set; }
         public required int CourseId {  get; set; }
 
-        public required DateTime DateCreated { get; set; }
-        public required bool Deleted { get; set; }
+        public  DateTime DateCreated { get; set; }
+
     }
 }

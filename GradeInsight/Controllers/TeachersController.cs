@@ -52,8 +52,21 @@ namespace GradeInsight.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(teacher).State = EntityState.Modified;
+            var existingTeacher = await _context.Teacher.FindAsync(id);
+            if (existingTeacher == null)
+            {
+                return NotFound();
+            }
 
+            // Update the properties of the existing teacher with the incoming teacher data, 
+            // but keep the DateCreated and Deleted properties unchanged.
+            existingTeacher.TeacherName = teacher.TeacherName;
+            existingTeacher.Email = teacher.Email;
+            existingTeacher.ContactNo = teacher.ContactNo;
+           
+            // Add other properties that need to be updated as necessary
+
+            // Save the changes to the database.
             try
             {
                 await _context.SaveChangesAsync();
@@ -73,11 +86,14 @@ namespace GradeInsight.Controllers
             return NoContent();
         }
 
+
         // POST: api/Teachers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Teacher>> PostTeacher(Teacher teacher)
         {
+            teacher.DateCreated = DateTime.Now;
+           
             _context.Teacher.Add(teacher);
             await _context.SaveChangesAsync();
 

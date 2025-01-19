@@ -4,7 +4,7 @@
     {
         public int FacultyId {  get; set; } 
         public required string FacultyName { get; set; }
-        public required DateTime DateCreated { get; set; }
-        public required bool Deleted { get; set; }
+        public  DateTime DateCreated { get; set; }
+        
     }
 }
