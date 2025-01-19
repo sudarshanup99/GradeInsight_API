@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GradeInsight")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92166a729159d3f978f2ff8cefeab9cc9cf8c24a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GradeInsight")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GradeInsight")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
