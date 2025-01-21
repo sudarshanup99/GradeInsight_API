@@ -525,3 +525,5 @@ E:\GradeInsight-Api\GradeInsight-API\GradeInsight\obj\Debug\net8.0\refint\GradeI
 E:\GradeInsight-Api\GradeInsight-API\GradeInsight\obj\Debug\net8.0\GradeInsight.pdb
 E:\GradeInsight-Api\GradeInsight-API\GradeInsight\obj\Debug\net8.0\GradeInsight.genruntimeconfig.cache
 E:\GradeInsight-Api\GradeInsight-API\GradeInsight\obj\Debug\net8.0\ref\GradeInsight.dll
+E:\GradeInsight-Api\GradeInsight-API\GradeInsight\bin\Debug\net8.0\Microsoft.OpenApi.dll
+E:\GradeInsight-Api\GradeInsight-API\GradeInsight\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll

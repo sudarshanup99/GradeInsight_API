@@ -10,6 +10,7 @@
         
 
         public required int SemesterId { get; set; }
+        public Semester ? Semester {  get; set; }
 
       
 

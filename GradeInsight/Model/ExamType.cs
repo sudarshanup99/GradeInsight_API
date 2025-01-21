@@ -4,6 +4,7 @@
     {
         public int ExamTypeId {  get; set; }
         public required string ExamTypeName {  get; set; }
+
         
        
        

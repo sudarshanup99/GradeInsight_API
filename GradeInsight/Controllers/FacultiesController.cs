@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
+using NuGet.DependencyResolver;
 
 namespace GradeInsight.Controllers
 {
@@ -52,8 +53,20 @@ namespace GradeInsight.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(faculty).State = EntityState.Modified;
+            var existingFaculty = await _context.Faculty.FindAsync(id);
+            if (existingFaculty == null)
+            {
+                return NotFound();
+            }
 
+            // Update the properties of the existing teacher with the incoming teacher data, 
+            // but keep the DateCreated and Deleted properties unchanged.
+            existingFaculty.FacultyName = faculty.FacultyName;
+          
+
+            // Add other properties that need to be updated as necessary
+
+            // Save the changes to the database.
             try
             {
                 await _context.SaveChangesAsync();
@@ -78,6 +91,7 @@ namespace GradeInsight.Controllers
         [HttpPost]
         public async Task<ActionResult<Faculty>> PostFaculty(Faculty faculty)
         {
+            faculty.DateCreated = DateTime.Now;
             _context.Faculty.Add(faculty);
             await _context.SaveChangesAsync();
 

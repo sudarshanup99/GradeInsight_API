@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
+using NuGet.Protocol.Plugins;
 
 namespace GradeInsight.Controllers
 {
@@ -25,7 +26,8 @@ namespace GradeInsight.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudent()
         {
-            return await _context.Student.ToListAsync();
+            var student= await _context.Student.Include(f=>f.Faculty).ToListAsync();
+            return Ok(student);
         }
 
         // GET: api/Students/5
@@ -43,7 +45,6 @@ namespace GradeInsight.Controllers
         }
 
         // PUT: api/Students/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStudent(int id, Student student)
         {
@@ -52,7 +53,18 @@ namespace GradeInsight.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(student).State = EntityState.Modified;
+            var existingStudent = await _context.Student.FindAsync(id);
+            if (existingStudent == null)
+            {
+                return NotFound();
+            }
+
+            // Update the properties of the existing teacher with the incoming teacher data, 
+            // but keep the DateCreated and Deleted properties unchanged.
+            existingStudent.StudentName = student.StudentName;
+                existingStudent.FacultyId = student.FacultyId;
+            existingStudent.Address = student.Address;
+            existingStudent.ContactNo = student.ContactNo;
 
             try
             {
@@ -78,6 +90,7 @@ namespace GradeInsight.Controllers
         [HttpPost]
         public async Task<ActionResult<Student>> PostStudent(Student student)
         {
+            student.DateCreated = DateTime.Now;
             _context.Student.Add(student);
             await _context.SaveChangesAsync();
 

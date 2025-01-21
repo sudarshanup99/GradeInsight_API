@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
+using NuGet.Protocol.Plugins;
 
 namespace GradeInsight.Controllers
 {
@@ -52,7 +53,17 @@ namespace GradeInsight.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(examType).State = EntityState.Modified;
+            var existingExamType = await _context.ExamType.FindAsync(id);
+            if (existingExamType == null)
+            {
+                return NotFound();
+            }
+
+            // Update the properties of the existing teacher with the incoming teacher data, 
+            // but keep the DateCreated and Deleted properties unchanged.
+            existingExamType.ExamTypeName = examType.ExamTypeName;
+
+
 
             try
             {
@@ -78,6 +89,7 @@ namespace GradeInsight.Controllers
         [HttpPost]
         public async Task<ActionResult<ExamType>> PostExamType(ExamType examType)
         {
+            
             _context.ExamType.Add(examType);
             await _context.SaveChangesAsync();
 
