@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
+using NuGet.Protocol.Plugins;
 
 namespace GradeInsight.Controllers
 {
@@ -78,6 +79,7 @@ namespace GradeInsight.Controllers
         [HttpPost]
         public async Task<ActionResult<TeacherxCourse>> PostTeacherxCourse(TeacherxCourse teacherxCourse)
         {
+            teacherxCourse.DateCreated = DateTime.Now;
             _context.TeacherxCourse.Add(teacherxCourse);
             await _context.SaveChangesAsync();
 

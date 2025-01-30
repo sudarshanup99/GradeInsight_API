@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
+using NuGet.Protocol.Plugins;
+using GradeInsight.SpecificRepositories.Marks;
+using GradeInsight.ViewModel;
 
 namespace GradeInsight.Controllers
 {
@@ -15,10 +18,12 @@ namespace GradeInsight.Controllers
     public class MarksController : ControllerBase
     {
         private readonly GradeInsightContext _context;
+        private readonly IMarksRepositories _marksRepositories;
 
-        public MarksController(GradeInsightContext context)
+        public MarksController(GradeInsightContext context, IMarksRepositories  marksRepositories)
         {
             _context = context;
+            _marksRepositories = marksRepositories;
         }
 
         // GET: api/Marks
@@ -27,7 +32,13 @@ namespace GradeInsight.Controllers
         {
             return await _context.Marks.ToListAsync();
         }
+        [HttpGet("result")]
+        public async Task<ActionResult<List<ResultDataVM>>> GetMarkFromStudent()
+        {
+            return await _marksRepositories.GetResultData();
+            
 
+        }
         // GET: api/Marks/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Marks>> GetMarks(int id)
@@ -52,8 +63,24 @@ namespace GradeInsight.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(marks).State = EntityState.Modified;
+            var existingMarks = await _context.Marks.FindAsync(id);
+            if (existingMarks == null)
+            {
+                return NotFound();
+            }
 
+            // Update the properties of the existing teacher with the incoming teacher data, 
+            // but keep the DateCreated and Deleted properties unchanged.
+            existingMarks.Mark = marks.Mark;
+            existingMarks.CourseId= marks.CourseId;
+            existingMarks.StudentId = marks.StudentId;
+            existingMarks.ExamTypeId = marks.ExamTypeId;
+
+
+
+            // Add other properties that need to be updated as necessary
+
+            // Save the changes to the database.
             try
             {
                 await _context.SaveChangesAsync();
@@ -78,6 +105,7 @@ namespace GradeInsight.Controllers
         [HttpPost]
         public async Task<ActionResult<Marks>> PostMarks(Marks marks)
         {
+            marks.DateCreated = DateTime.Now;
             _context.Marks.Add(marks);
             await _context.SaveChangesAsync();
 

@@ -22,5 +22,7 @@ namespace GradeInsight.Data
         public DbSet<GradeInsight.Model.Teacher> Teacher { get; set; } = default!;
         public DbSet<GradeInsight.Model.TeacherxCourse> TeacherxCourse { get; set; } = default!;
         public DbSet<GradeInsight.Model.ExamType> ExamType { get; set; } = default!;
+        public DbSet<GradeInsight.Model.UserType> UserType { get; set; } = default!;
+        public DbSet<GradeInsight.Model.User> User { get; set; } = default!;
     }
 }

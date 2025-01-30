@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
+using NuGet.Protocol.Plugins;
 
 namespace GradeInsight.Controllers
 {
@@ -25,7 +26,10 @@ namespace GradeInsight.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Course>>> GetCourse()
         {
-            return await _context.Course.ToListAsync();
+            var course = await _context.Course
+                                        .Include(s => s.Semester)
+                                        .ToListAsync();
+            return Ok(course);
         }
 
         // GET: api/Courses/5
@@ -51,8 +55,22 @@ namespace GradeInsight.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(course).State = EntityState.Modified;
+            var existingCourse = await _context.Course.FindAsync(id);
+            if (existingCourse == null)
+            {
+                return NotFound();
+            }
 
+            // Update the properties of the existing teacher with the incoming teacher data, 
+            // but keep the DateCreated and Deleted properties unchanged.
+            existingCourse.CourseName = course.CourseName;
+            existingCourse.SemesterId=course.SemesterId;
+            
+
+
+            // Add other properties that need to be updated as necessary
+
+            // Save the changes to the database.
             try
             {
                 await _context.SaveChangesAsync();
@@ -76,6 +94,7 @@ namespace GradeInsight.Controllers
         [HttpPost]
         public async Task<ActionResult<Course>> PostCourse(Course course)
         {
+            course.DateCreated = DateTime.Now;
             _context.Course.Add(course);
             await _context.SaveChangesAsync();
 

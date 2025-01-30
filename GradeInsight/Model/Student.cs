@@ -8,5 +8,6 @@
         public required string ContactNo{  get; set; }
         public  DateTime DateCreated { get; set; }
         public required int FacultyId {  get; set; }
+        public Faculty ? Faculty {  get; set; }
     }
 }
