@@ -6,52 +6,53 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
+using GradeInsight.Model;
 
-namespace GradeInsight.Model
+namespace GradeInsight.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserTypesController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly GradeInsightContext _context;
 
-        public UserTypesController(GradeInsightContext context)
+        public UsersController(GradeInsightContext context)
         {
             _context = context;
         }
 
-        // GET: api/UserTypes
+        // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserType>>> GetUserType()
+        public async Task<ActionResult<IEnumerable<User>>> GetUser()
         {
-            return await _context.UserType.ToListAsync();
+            return await _context.User.ToListAsync();
         }
 
-        // GET: api/UserTypes/5
+        // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserType>> GetUserType(int id)
+        public async Task<ActionResult<User>> GetUser(int id)
         {
-            var userType = await _context.UserType.FindAsync(id);
+            var user = await _context.User.FindAsync(id);
 
-            if (userType == null)
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return userType;
+            return user;
         }
 
-        // PUT: api/UserTypes/5
+        // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUserType(int id, UserType userType)
+        public async Task<IActionResult> PutUser(int id, User user)
         {
-            if (id != userType.UserTypeId)
+            if (id != user.UserId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(userType).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
 
             try
             {
@@ -59,7 +60,7 @@ namespace GradeInsight.Model
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserTypeExists(id))
+                if (!UserExists(id))
                 {
                     return NotFound();
                 }
@@ -72,36 +73,36 @@ namespace GradeInsight.Model
             return NoContent();
         }
 
-        // POST: api/UserTypes
+        // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<UserType>> PostUserType(UserType userType)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
-            _context.UserType.Add(userType);
+            _context.User.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUserType", new { id = userType.UserTypeId }, userType);
+            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
         }
 
-        // DELETE: api/UserTypes/5
+        // DELETE: api/Users/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUserType(int id)
+        public async Task<IActionResult> DeleteUser(int id)
         {
-            var userType = await _context.UserType.FindAsync(id);
-            if (userType == null)
+            var user = await _context.User.FindAsync(id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            _context.UserType.Remove(userType);
+            _context.User.Remove(user);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool UserTypeExists(int id)
+        private bool UserExists(int id)
         {
-            return _context.UserType.Any(e => e.UserTypeId == id);
+            return _context.User.Any(e => e.UserId == id);
         }
     }
 }
