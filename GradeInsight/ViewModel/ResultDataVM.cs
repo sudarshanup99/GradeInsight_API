@@ -11,6 +11,6 @@
      
 
 
-        public MarksDataVM ?Marks { get; set; }
+        public List< MarksDataVM> ?Marks { get; set; }
     }
 }

@@ -74,6 +74,7 @@ namespace GradeInsight.Controllers
             existingMarks.Mark = marks.Mark;
             existingMarks.CourseId= marks.CourseId;
             existingMarks.StudentId = marks.StudentId;
+            existingMarks.ExamTypeId = marks.ExamTypeId;
 
 
 
