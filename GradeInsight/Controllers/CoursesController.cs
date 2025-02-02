@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
 using NuGet.Protocol.Plugins;
+using GradeInsight.SpecificRepositories.Courses;
+using GradeInsight.SpecificRepositories.Faculties;
 
 namespace GradeInsight.Controllers
 {
@@ -16,10 +18,12 @@ namespace GradeInsight.Controllers
     public class CoursesController : ControllerBase
     {
         private readonly GradeInsightContext _context;
+        private readonly ICoursesRepositories _coursesRepositories;
 
-        public CoursesController(GradeInsightContext context)
+        public CoursesController(GradeInsightContext context, ICoursesRepositories coursesRepositories)
         {
             _context = context;
+            _coursesRepositories = coursesRepositories;
         }
 
         // GET: api/Courses
@@ -30,6 +34,12 @@ namespace GradeInsight.Controllers
                                         .Include(s => s.Semester)
                                         .ToListAsync();
             return Ok(course);
+        }
+        [HttpGet("courseCount")]
+        public async Task<IActionResult> GetFacultyCount()
+        {
+            var courseCount = await _coursesRepositories.GetCourseCount();
+            return Ok(courseCount);
         }
 
         // GET: api/Courses/5

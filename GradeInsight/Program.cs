@@ -3,6 +3,10 @@ using Microsoft.Extensions.DependencyInjection;
 using GradeInsight.Data;
 using Microsoft.AspNetCore.Builder;
 using GradeInsight.SpecificRepositories.Marks;
+using GradeInsight.SpecificRepositories.Faculties;
+using GradeInsight.SpecificRepositories.Teachers;
+using GradeInsight.SpecificRepositories.Courses;
+using GradeInsight.SpecificRepositories.Students;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +17,11 @@ builder.Services.AddDbContext<GradeInsightContext>(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<IMarksRepositories, MarksRepositories>();
+builder.Services.AddScoped<IFacultiesRepositories, FacultiesRepositories>();
+builder.Services.AddScoped<ITeachersRepositories,TeachersRepositories>();
+builder.Services.AddScoped<ICoursesRepositories,CoursesRepositories>();
+builder.Services.AddScoped<IStudentsRepositories,StudentsRepositories>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy",

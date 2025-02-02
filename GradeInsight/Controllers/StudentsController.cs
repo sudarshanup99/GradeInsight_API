@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
 using NuGet.Protocol.Plugins;
+using GradeInsight.SpecificRepositories.Students;
 
 namespace GradeInsight.Controllers
 {
@@ -16,10 +17,12 @@ namespace GradeInsight.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly GradeInsightContext _context;
+        private readonly IStudentsRepositories _studentsRepositories;
 
-        public StudentsController(GradeInsightContext context)
+        public StudentsController(GradeInsightContext context,IStudentsRepositories studentsRepositories)
         {
             _context = context;
+            _studentsRepositories = studentsRepositories;
         }
 
         // GET: api/Students
@@ -28,6 +31,12 @@ namespace GradeInsight.Controllers
         {
             var student= await _context.Student.Include(f=>f.Faculty).ToListAsync();
             return Ok(student);
+        }
+        [HttpGet("studentCount")]
+        public async Task<IActionResult> GetStudentCount()
+        {
+            var totalStudentinFaculty = await _studentsRepositories.GetStudentCount();
+            return Ok(totalStudentinFaculty);
         }
 
         // GET: api/Students/5
