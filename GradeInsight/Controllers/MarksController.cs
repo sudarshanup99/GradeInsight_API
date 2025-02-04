@@ -39,6 +39,32 @@ namespace GradeInsight.Controllers
             
 
         }
+        [HttpGet("resultInsight")]
+        public async Task<IActionResult> GetResultInsight()
+        {
+            var resultInsight = await _marksRepositories.GetResultInsight();
+
+            if (resultInsight == null || !resultInsight.Any())
+            {
+                return NotFound(new { message = "No marks data available." });
+            }
+
+            return Ok(resultInsight);
+        }
+        [HttpGet("courseAverages")]
+        public async Task<IActionResult> GetCourseAverages()
+        {
+            var courseAverage = await _marksRepositories.GetCourseAverages();
+
+            if (courseAverage == null || !courseAverage.Any())
+            {
+                return NotFound(new { message = "No marks data available." });
+            }
+
+            return Ok(courseAverage);
+        }
+
+
         // GET: api/Marks/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Marks>> GetMarks(int id)
