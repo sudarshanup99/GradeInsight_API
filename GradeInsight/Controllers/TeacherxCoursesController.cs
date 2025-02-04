@@ -26,7 +26,11 @@ namespace GradeInsight.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TeacherxCourse>>> GetTeacherxCourse()
         {
-            return await _context.TeacherxCourse.ToListAsync();
+            var teacherxcourses = await _context.TeacherxCourse
+                                          .Include(s => s.Teacher)
+                                          .Include(s => s.Course)
+                                          .ToListAsync();
+            return Ok(teacherxcourses);
         }
 
         // GET: api/TeacherxCourses/5
@@ -48,7 +52,7 @@ namespace GradeInsight.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTeacherxCourse(int id, TeacherxCourse teacherxCourse)
         {
-            if (id != teacherxCourse.TeacherXcourseId)
+            if (id != teacherxCourse.TeacherxCourseId)
             {
                 return BadRequest();
             }
@@ -83,7 +87,7 @@ namespace GradeInsight.Controllers
             _context.TeacherxCourse.Add(teacherxCourse);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTeacherxCourse", new { id = teacherxCourse.TeacherXcourseId }, teacherxCourse);
+            return CreatedAtAction("GetTeacherxCourse", new { id = teacherxCourse.TeacherxCourseId }, teacherxCourse);
         }
 
         // DELETE: api/TeacherxCourses/5
@@ -104,7 +108,7 @@ namespace GradeInsight.Controllers
 
         private bool TeacherxCourseExists(int id)
         {
-            return _context.TeacherxCourse.Any(e => e.TeacherXcourseId == id);
+            return _context.TeacherxCourse.Any(e => e.TeacherxCourseId == id);
         }
     }
 }
