@@ -57,8 +57,23 @@ namespace GradeInsight.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(teacherxCourse).State = EntityState.Modified;
+            
+            var existingTeacherxCourse = await _context.TeacherxCourse.FindAsync(id);
 
+            if (existingTeacherxCourse == null)
+            {
+                return NotFound();
+            }
+
+            // Update the properties of the existing teacher with the incoming teacher data, 
+            // but keep the DateCreated and Deleted properties unchanged.
+            existingTeacherxCourse.TeacherId = teacherxCourse.TeacherId;
+            existingTeacherxCourse.CourseId = teacherxCourse.CourseId;
+
+
+            // Add other properties that need to be updated as necessary
+
+            // Save the changes to the database.
             try
             {
                 await _context.SaveChangesAsync();
