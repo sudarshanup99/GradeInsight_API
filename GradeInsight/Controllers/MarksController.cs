@@ -63,7 +63,19 @@ namespace GradeInsight.Controllers
 
             return Ok(courseAverage);
         }
+        // GET: api/Marks/student/{id}
+        [HttpGet("student/{id}")]
+        public async Task<ActionResult<List<ResultDataVM>>> GetStudentResultData(int id)
+        {
+            var studentResult = await _marksRepositories.GetStudentResultData(id);
 
+            if (studentResult == null || !studentResult.Any())
+            {
+                return NotFound(new { message = "No results found for this student." });
+            }
+
+            return studentResult;
+        }
 
         // GET: api/Marks/5
         [HttpGet("{id}")]

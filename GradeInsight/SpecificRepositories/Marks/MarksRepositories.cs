@@ -145,6 +145,68 @@ namespace GradeInsight.SpecificRepositories.Marks
             return groupedResult;
         }
 
+        public async Task<List<ResultDataVM>> GetStudentResultData(int id)
+        {
+            var result = await (from st in _context.Student.AsNoTracking()
+                                join m in _context.Marks.AsNoTracking() on st.StudentId equals m.StudentId
+                                join c in _context.Course.AsNoTracking() on m.CourseId equals c.CourseId
+                                join s in _context.Semester.AsNoTracking() on c.SemesterId equals s.SemesterId
+                                join f in _context.Faculty.AsNoTracking() on s.FacultyId equals f.FacultyId
+                                join et in _context.ExamType.AsNoTracking() on m.ExamTypeId equals et.ExamTypeId
+                                select new
+                                {
+                                    StudentId = st.StudentId,
+                                    StudentName = st.StudentName,
+                                    FacultyId = f.FacultyId,
+                                    FacultyName = f.FacultyName,
+                                    SemesterId = s.SemesterId,
+                                    SemesterName = s.SemesterName,
+                                    Marks = new
+                                    {
+                                        MarksId = m.MarksId,
+                                        Mark = m.Mark,
+                                        CourseId = c.CourseId,
+                                        CourseName = c.CourseName,
+                                        ExamTypeId = et.ExamTypeId,
+                                        ExamTypeName = et.ExamTypeName
+                                    }
+                                })
+                                .ToListAsync();
+
+            var groupedResult = result
+                                .GroupBy(x => new
+                                {
+                                    x.StudentId,
+                                    x.StudentName,
+                                    x.FacultyId,
+                                    x.FacultyName,
+                                    x.SemesterId,
+                                    x.SemesterName
+                                })
+                                .Select(g => new ResultDataVM
+                                {
+                                    StudentId = g.Key.StudentId,
+                                    StudentName = g.Key.StudentName,
+                                    FacultyId = g.Key.FacultyId,
+                                    FacultyName = g.Key.FacultyName,
+                                    SemesterId = g.Key.SemesterId,
+                                    SemesterName = g.Key.SemesterName,
+                                    Marks = g.Select(m => new MarksDataVM
+                                    {
+                                        MarksId = m.Marks.MarksId,
+                                        Mark = m.Marks.Mark,
+                                        CourseId = m.Marks.CourseId,
+                                        CourseName = m.Marks.CourseName,
+                                        ExamTypeId = m.Marks.ExamTypeId,
+                                        ExamTypeName = m.Marks.ExamTypeName
+                                    }).ToList()
+                                })
+                                .ToList();
+
+            return groupedResult;
+        }
+
+
 
 
     }

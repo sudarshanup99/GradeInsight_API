@@ -1,4 +1,5 @@
 ﻿using GradeInsight.Data;
+using GradeInsight.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace GradeInsight.SpecificRepositories.Students
@@ -26,7 +27,7 @@ namespace GradeInsight.SpecificRepositories.Students
 
             return totalStudentinFaculty;
         }
-
+        
 
     }
 }
