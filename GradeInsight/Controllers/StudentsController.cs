@@ -29,8 +29,12 @@ namespace GradeInsight.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudent()
         {
-            var student= await _context.Student.Include(f=>f.Faculty).ToListAsync();
-            return Ok(student);
+            var students = await _context.Student
+                                        .Include(s => s.Faculty)
+                                        .Include(s => s.Semester)
+                                        .ToListAsync();
+
+            return Ok(students);
         }
         [HttpGet("studentCount")]
         public async Task<IActionResult> GetStudentCount()
@@ -71,7 +75,9 @@ namespace GradeInsight.Controllers
             // Update the properties of the existing teacher with the incoming teacher data, 
             // but keep the DateCreated and Deleted properties unchanged.
             existingStudent.StudentName = student.StudentName;
-                existingStudent.FacultyId = student.FacultyId;
+            existingStudent.FacultyId = student.FacultyId;
+            existingStudent.SemesterId = student.SemesterId;
+
             existingStudent.Address = student.Address;
             existingStudent.ContactNo = student.ContactNo;
 

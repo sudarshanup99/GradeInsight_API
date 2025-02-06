@@ -39,6 +39,44 @@ namespace GradeInsight.Controllers
             
 
         }
+        [HttpGet("resultInsight")]
+        public async Task<IActionResult> GetResultInsight()
+        {
+            var resultInsight = await _marksRepositories.GetResultInsight();
+
+            if (resultInsight == null || !resultInsight.Any())
+            {
+                return NotFound(new { message = "No marks data available." });
+            }
+
+            return Ok(resultInsight);
+        }
+        [HttpGet("courseAverages")]
+        public async Task<IActionResult> GetCourseAverages()
+        {
+            var courseAverage = await _marksRepositories.GetCourseAverages();
+
+            if (courseAverage == null || !courseAverage.Any())
+            {
+                return NotFound(new { message = "No marks data available." });
+            }
+
+            return Ok(courseAverage);
+        }
+        // GET: api/Marks/student/{id}
+        [HttpGet("student/{id}")]
+        public async Task<ActionResult<List<ResultDataVM>>> GetStudentResultData(int id)
+        {
+            var studentResult = await _marksRepositories.GetStudentResultData(id);
+
+            if (studentResult == null || !studentResult.Any())
+            {
+                return NotFound(new { message = "No results found for this student." });
+            }
+
+            return studentResult;
+        }
+
         // GET: api/Marks/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Marks>> GetMarks(int id)
@@ -105,6 +143,14 @@ namespace GradeInsight.Controllers
         [HttpPost]
         public async Task<ActionResult<Marks>> PostMarks(Marks marks)
         {
+            var existingMark = await _context.Marks
+        .FirstOrDefaultAsync(m => m.StudentId == marks.StudentId && m.CourseId == marks.CourseId);
+
+            if (existingMark != null)
+            {
+                return BadRequest("Marks for this student in the selected course already exist.");
+            }
+
             marks.DateCreated = DateTime.Now;
             _context.Marks.Add(marks);
             await _context.SaveChangesAsync();

@@ -26,7 +26,11 @@ namespace GradeInsight.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TeacherxCourse>>> GetTeacherxCourse()
         {
-            return await _context.TeacherxCourse.ToListAsync();
+            var teacherxcourses = await _context.TeacherxCourse
+                                          .Include(s => s.Teacher)
+                                          .Include(s => s.Course)
+                                          .ToListAsync();
+            return Ok(teacherxcourses);
         }
 
         // GET: api/TeacherxCourses/5
@@ -48,13 +52,28 @@ namespace GradeInsight.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTeacherxCourse(int id, TeacherxCourse teacherxCourse)
         {
-            if (id != teacherxCourse.TeacherXcourseId)
+            if (id != teacherxCourse.TeacherxCourseId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(teacherxCourse).State = EntityState.Modified;
+            
+            var existingTeacherxCourse = await _context.TeacherxCourse.FindAsync(id);
 
+            if (existingTeacherxCourse == null)
+            {
+                return NotFound();
+            }
+
+            // Update the properties of the existing teacher with the incoming teacher data, 
+            // but keep the DateCreated and Deleted properties unchanged.
+            existingTeacherxCourse.TeacherId = teacherxCourse.TeacherId;
+            existingTeacherxCourse.CourseId = teacherxCourse.CourseId;
+
+
+            // Add other properties that need to be updated as necessary
+
+            // Save the changes to the database.
             try
             {
                 await _context.SaveChangesAsync();
@@ -83,7 +102,7 @@ namespace GradeInsight.Controllers
             _context.TeacherxCourse.Add(teacherxCourse);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTeacherxCourse", new { id = teacherxCourse.TeacherXcourseId }, teacherxCourse);
+            return CreatedAtAction("GetTeacherxCourse", new { id = teacherxCourse.TeacherxCourseId }, teacherxCourse);
         }
 
         // DELETE: api/TeacherxCourses/5
@@ -104,7 +123,7 @@ namespace GradeInsight.Controllers
 
         private bool TeacherxCourseExists(int id)
         {
-            return _context.TeacherxCourse.Any(e => e.TeacherXcourseId == id);
+            return _context.TeacherxCourse.Any(e => e.TeacherxCourseId == id);
         }
     }
 }

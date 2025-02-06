@@ -6,7 +6,9 @@
         public required string SemesterName { get; set; }
        public required int FacultyId {  get; set; }
 
-         public  DateTime DateCreated { get; set; }
-        public Faculty ? Faculty { get; set; }  
+        public  DateTime DateCreated { get; set; }
+        public Faculty ? Faculty { get; set; }
+
+        
     }
 }

@@ -9,5 +9,9 @@
         public  DateTime DateCreated { get; set; }
         public required int FacultyId {  get; set; }
         public Faculty ? Faculty {  get; set; }
+
+        public required int SemesterId { get;  set; }
+        public Semester ? Semester { get; set; }
+        
     }
 }
