@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
 using NuGet.DependencyResolver;
+using GradeInsight.SpecificRepositories.Faculties;
 
 namespace GradeInsight.Controllers
 {
@@ -16,10 +17,12 @@ namespace GradeInsight.Controllers
     public class FacultiesController : ControllerBase
     {
         private readonly GradeInsightContext _context;
+        private readonly IFacultiesRepositories _facultiesRepositories;
 
-        public FacultiesController(GradeInsightContext context)
+        public FacultiesController(GradeInsightContext context,IFacultiesRepositories facultiesRepositories)
         {
             _context = context;
+            _facultiesRepositories = facultiesRepositories;
         }
 
         // GET: api/Faculties
@@ -27,6 +30,13 @@ namespace GradeInsight.Controllers
         public async Task<ActionResult<IEnumerable<Faculty>>> GetFaculty()
         {
             return await _context.Faculty.ToListAsync();
+        }
+
+        [HttpGet("facultyCount")]
+        public async Task<IActionResult> GetFacultyCount()
+        {
+            var facultyCount= await _facultiesRepositories.GetFacultyCount();
+            return Ok(facultyCount);
         }
 
         // GET: api/Faculties/5

@@ -8,9 +8,6 @@
         public required string FacultyName { get; set; }
         public int SemesterId { get; set; }
         public required string SemesterName { get; set; }
-     
-
-
         public List< MarksDataVM> ?Marks { get; set; }
     }
 }

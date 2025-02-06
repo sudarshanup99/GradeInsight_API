@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
+using GradeInsight.SpecificRepositories.Teachers;
 
 namespace GradeInsight.Controllers
 {
@@ -15,10 +16,12 @@ namespace GradeInsight.Controllers
     public class TeachersController : ControllerBase
     {
         private readonly GradeInsightContext _context;
+        private readonly ITeachersRepositories _teachersRepositories;
 
-        public TeachersController(GradeInsightContext context)
+        public TeachersController(GradeInsightContext context, ITeachersRepositories teachersRepositories)
         {
             _context = context;
+            _teachersRepositories = teachersRepositories;
         }
 
         // GET: api/Teachers
@@ -26,6 +29,12 @@ namespace GradeInsight.Controllers
         public async Task<ActionResult<IEnumerable<Teacher>>> GetTeacher()
         {
             return await _context.Teacher.ToListAsync();
+        }
+        [HttpGet("teacherCount")]
+        public async Task<IActionResult> GetTeacherCount()
+        {
+            var facultyCount = await _teachersRepositories.GetTeacherCount();
+            return Ok(facultyCount);
         }
 
         // GET: api/Teachers/5

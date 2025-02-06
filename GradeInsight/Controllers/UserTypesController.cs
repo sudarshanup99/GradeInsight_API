@@ -6,8 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
+using GradeInsight.Model;
 
-namespace GradeInsight.Model
+namespace GradeInsight.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
