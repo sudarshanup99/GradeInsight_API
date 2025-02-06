@@ -109,6 +109,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GradeInsight.Controllers.CoursesController",
+    "Method": "GetFacultyCount",
+    "RelativePath": "api/Courses/courseCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GradeInsight.Controllers.ExamTypesController",
     "Method": "GetExamType",
     "RelativePath": "api/ExamTypes",
@@ -327,6 +337,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GradeInsight.Controllers.FacultiesController",
+    "Method": "GetFacultyCount",
+    "RelativePath": "api/Faculties/facultyCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GradeInsight.Controllers.MarksController",
     "Method": "GetMarks",
     "RelativePath": "api/Marks",
@@ -437,12 +457,58 @@
   },
   {
     "ContainingType": "GradeInsight.Controllers.MarksController",
+    "Method": "GetCourseAverages",
+    "RelativePath": "api/Marks/courseAverages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GradeInsight.Controllers.MarksController",
     "Method": "GetMarkFromStudent",
     "RelativePath": "api/Marks/result",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[GradeInsight.ViewModel.ResultDataVM, GradeInsight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GradeInsight.Controllers.MarksController",
+    "Method": "GetResultInsight",
+    "RelativePath": "api/Marks/resultInsight",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GradeInsight.Controllers.MarksController",
+    "Method": "GetStudentResultData",
+    "RelativePath": "api/Marks/student/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[GradeInsight.ViewModel.ResultDataVM, GradeInsight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -674,6 +740,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GradeInsight.Controllers.StudentsController",
+    "Method": "GetStudentCount",
+    "RelativePath": "api/Students/studentCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GradeInsight.Controllers.TeachersController",
     "Method": "GetTeacher",
     "RelativePath": "api/Teachers",
@@ -780,6 +856,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GradeInsight.Controllers.TeachersController",
+    "Method": "GetTeacherCount",
+    "RelativePath": "api/Teachers/teacherCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -1001,7 +1087,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GradeInsight.Model.UserTypesController",
+    "ContainingType": "GradeInsight.Controllers.UserTypesController",
     "Method": "GetUserType",
     "RelativePath": "api/UserTypes",
     "HttpMethod": "GET",
@@ -1021,7 +1107,7 @@
     ]
   },
   {
-    "ContainingType": "GradeInsight.Model.UserTypesController",
+    "ContainingType": "GradeInsight.Controllers.UserTypesController",
     "Method": "PostUserType",
     "RelativePath": "api/UserTypes",
     "HttpMethod": "POST",
@@ -1047,7 +1133,7 @@
     ]
   },
   {
-    "ContainingType": "GradeInsight.Model.UserTypesController",
+    "ContainingType": "GradeInsight.Controllers.UserTypesController",
     "Method": "GetUserType",
     "RelativePath": "api/UserTypes/{id}",
     "HttpMethod": "GET",
@@ -1073,7 +1159,7 @@
     ]
   },
   {
-    "ContainingType": "GradeInsight.Model.UserTypesController",
+    "ContainingType": "GradeInsight.Controllers.UserTypesController",
     "Method": "PutUserType",
     "RelativePath": "api/UserTypes/{id}",
     "HttpMethod": "PUT",
@@ -1094,7 +1180,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GradeInsight.Model.UserTypesController",
+    "ContainingType": "GradeInsight.Controllers.UserTypesController",
     "Method": "DeleteUserType",
     "RelativePath": "api/UserTypes/{id}",
     "HttpMethod": "DELETE",
