@@ -143,6 +143,14 @@ namespace GradeInsight.Controllers
         [HttpPost]
         public async Task<ActionResult<Marks>> PostMarks(Marks marks)
         {
+            var existingMark = await _context.Marks
+        .FirstOrDefaultAsync(m => m.StudentId == marks.StudentId && m.CourseId == marks.CourseId);
+
+            if (existingMark != null)
+            {
+                return BadRequest("Marks for this student in the selected course already exist.");
+            }
+
             marks.DateCreated = DateTime.Now;
             _context.Marks.Add(marks);
             await _context.SaveChangesAsync();

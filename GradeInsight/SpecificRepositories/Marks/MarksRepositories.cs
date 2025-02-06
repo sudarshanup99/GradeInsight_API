@@ -153,6 +153,7 @@ namespace GradeInsight.SpecificRepositories.Marks
                                 join s in _context.Semester.AsNoTracking() on c.SemesterId equals s.SemesterId
                                 join f in _context.Faculty.AsNoTracking() on s.FacultyId equals f.FacultyId
                                 join et in _context.ExamType.AsNoTracking() on m.ExamTypeId equals et.ExamTypeId
+                                where st.StudentId == id
                                 select new
                                 {
                                     StudentId = st.StudentId,
