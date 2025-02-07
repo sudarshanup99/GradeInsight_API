@@ -7,6 +7,7 @@ using GradeInsight.SpecificRepositories.Faculties;
 using GradeInsight.SpecificRepositories.Teachers;
 using GradeInsight.SpecificRepositories.Courses;
 using GradeInsight.SpecificRepositories.Students;
+using GradeInsight.SpecificRepositories.Prediction;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +22,7 @@ builder.Services.AddScoped<IFacultiesRepositories, FacultiesRepositories>();
 builder.Services.AddScoped<ITeachersRepositories,TeachersRepositories>();
 builder.Services.AddScoped<ICoursesRepositories,CoursesRepositories>();
 builder.Services.AddScoped<IStudentsRepositories,StudentsRepositories>();
+builder.Services.AddScoped<IPredictionRepositories,PredictionRepositories>();
 
 builder.Services.AddCors(options =>
 {

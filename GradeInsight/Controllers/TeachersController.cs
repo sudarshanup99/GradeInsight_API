@@ -101,6 +101,15 @@ namespace GradeInsight.Controllers
         [HttpPost]
         public async Task<ActionResult<Teacher>> PostTeacher(Teacher teacher)
         {
+            var existingTeacher = await _context.Teacher
+                                .FirstOrDefaultAsync(t => t.TeacherName == teacher.TeacherName
+                                && t.ContactNo == teacher.ContactNo
+                                && t.Email == teacher.Email);
+
+            if (existingTeacher != null)
+            {
+                return BadRequest("A teacher with the same Name, Contact Number, and Email already exists.");
+            }
             teacher.DateCreated = DateTime.Now;
            
             _context.Teacher.Add(teacher);

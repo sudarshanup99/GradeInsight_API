@@ -104,6 +104,14 @@ namespace GradeInsight.Controllers
         [HttpPost]
         public async Task<ActionResult<Course>> PostCourse(Course course)
         {
+            // Check if a course with the same CourseName and SemesterId already exists
+            var existingCourse = await _context.Course
+                                .FirstOrDefaultAsync(c => c.CourseName == course.CourseName && c.SemesterId == course.SemesterId);
+
+            if (existingCourse != null)
+            {
+                return BadRequest("A course with the same name already exists in this semester.");
+            }
             course.DateCreated = DateTime.Now;
             _context.Course.Add(course);
             await _context.SaveChangesAsync();
