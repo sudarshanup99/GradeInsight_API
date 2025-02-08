@@ -9,11 +9,14 @@ using GradeInsight.Data;
 using GradeInsight.Model;
 using NuGet.DependencyResolver;
 using GradeInsight.SpecificRepositories.Faculties;
+using GradeInsight.Utilities;
 
 namespace GradeInsight.Controllers
 {
+    [ApiKeyAuth]
     [Route("api/[controller]")]
     [ApiController]
+   
     public class FacultiesController : ControllerBase
     {
         private readonly GradeInsightContext _context;

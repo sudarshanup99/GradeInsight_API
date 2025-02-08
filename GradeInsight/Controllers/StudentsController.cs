@@ -9,6 +9,8 @@ using GradeInsight.Data;
 using GradeInsight.Model;
 using NuGet.Protocol.Plugins;
 using GradeInsight.SpecificRepositories.Students;
+using GradeInsight.SpecificRepositories.Prediction;
+using GradeInsight.ViewModel;
 
 namespace GradeInsight.Controllers
 {
@@ -18,11 +20,13 @@ namespace GradeInsight.Controllers
     {
         private readonly GradeInsightContext _context;
         private readonly IStudentsRepositories _studentsRepositories;
+        private readonly IPredictionRepositories _predictionRepositories;
 
-        public StudentsController(GradeInsightContext context,IStudentsRepositories studentsRepositories)
+        public StudentsController(GradeInsightContext context,IStudentsRepositories studentsRepositories,IPredictionRepositories predictionRepositories)
         {
             _context = context;
             _studentsRepositories = studentsRepositories;
+            _predictionRepositories = predictionRepositories;
         }
 
         // GET: api/Students
@@ -122,6 +126,19 @@ namespace GradeInsight.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetStudent", new { id = student.StudentId }, student);
+        }
+        [HttpPost("trainModel")]
+        public async Task<ActionResult> TrainModel()
+        {
+            await _predictionRepositories.TrainModel();
+            return Ok("Model trained successfully");
+        }
+
+        [HttpPost("predict")]
+        public async Task<IActionResult> Predict(PredictionInitialDataViewModel inputData)
+        {
+            var predictedMarks = await _predictionRepositories.PredictMarks(inputData);
+            return Ok(new { predictedMarks });
         }
 
         // DELETE: api/Students/5
