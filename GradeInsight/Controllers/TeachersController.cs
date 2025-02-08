@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using GradeInsight.Data;
 using GradeInsight.Model;
 using GradeInsight.SpecificRepositories.Teachers;
+using GradeInsight.Utilities;
 
 namespace GradeInsight.Controllers
 {
+    [ApiKeyAuth]
     [Route("api/[controller]")]
     [ApiController]
     public class TeachersController : ControllerBase

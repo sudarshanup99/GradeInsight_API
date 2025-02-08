@@ -11,9 +11,11 @@ using NuGet.Protocol.Plugins;
 using GradeInsight.SpecificRepositories.Students;
 using GradeInsight.SpecificRepositories.Prediction;
 using GradeInsight.ViewModel;
+using GradeInsight.Utilities;
 
 namespace GradeInsight.Controllers
 {
+    [ApiKeyAuth]
     [Route("api/[controller]")]
     [ApiController]
     public class StudentsController : ControllerBase

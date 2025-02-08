@@ -10,9 +10,11 @@ using GradeInsight.Model;
 using NuGet.Protocol.Plugins;
 using GradeInsight.SpecificRepositories.Marks;
 using GradeInsight.ViewModel;
+using GradeInsight.Utilities;
 
 namespace GradeInsight.Controllers
 {
+    [ApiKeyAuth]
     [Route("api/[controller]")]
     [ApiController]
     public class MarksController : ControllerBase

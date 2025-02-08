@@ -13,7 +13,7 @@ using NuGet.DependencyResolver;
 
 namespace GradeInsight.Controllers
 {
-    
+    [ApiKeyAuth]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
@@ -49,7 +49,7 @@ namespace GradeInsight.Controllers
         }
 
         // PUT: api/Users/5
-     
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
@@ -64,17 +64,11 @@ namespace GradeInsight.Controllers
                 return NotFound();
             }
 
-       
-         
-           
             var getUserByemail = await _userRepositories.GetUserDetailFromUserEmail(existingUser.UserEmail);
 
-            if (getUserByemail != null)
+            if (getUserByemail != null && getUserByemail.UserId != id)
             {
-                if (getUserByemail.UserId != id)
-                {
-                    return BadRequest("User with Email already exists. Choose another Email!");
-                }
+                return BadRequest("User with Email already exists. Choose another Email!");
             }
 
             Request.Headers.TryGetValue("userPassword", out var userPasswordFromHeader);
@@ -83,12 +77,12 @@ namespace GradeInsight.Controllers
                 string hashPasswordResult = HashingAndVerification.ComputeHash(userPasswordFromHeader.ToString(), HashingAndVerification.Supported_HA.SHA256, null);
                 existingUser.UserPassword = hashPasswordResult;
             }
+
+            // **Ensure UserTypeId is updated**
+            existingUser.UserTypeId = user.UserTypeId;
             existingUser.UserName = user.UserName;
             existingUser.UserEmail = user.UserEmail;
             existingUser.UserFullName = user.UserFullName;
-            // Update only the fields that are provided
-
-
 
             try
             {
@@ -106,11 +100,9 @@ namespace GradeInsight.Controllers
                 }
             }
 
-         
-
-
             return NoContent();
         }
+
 
         // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
