@@ -1,5 +1,6 @@
 ﻿using GradeInsight.Data;
 using GradeInsight.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace GradeInsight.SpecificRepositories.Prediction
@@ -23,46 +24,35 @@ namespace GradeInsight.SpecificRepositories.Prediction
         {
             var trainingData = await (from m in _context.Marks.AsNoTracking()
                                       join c in _context.Course.AsNoTracking() on m.CourseId equals c.CourseId
-                                      join s in _context.Semester.AsNoTracking() on c.SemesterId equals s.SemesterId
-                                      join e in _context.ExamType.AsNoTracking() on m.ExamTypeId equals e.ExamTypeId
-                                      join f in _context.Faculty.AsNoTracking() on s.FacultyId equals f.FacultyId
                                       where m.Mark > 0
-                                      group m by new { m.StudentId, m.CourseId } into g
+                                      group m by new { m.StudentId } into g
                                       select new
                                       {
-                                          StudentId = g.Key.StudentId,
-                                          CourseId = g.Key.CourseId,
-                                          InternalMarks = g.Where(x => x.ExamTypeId == 1 && x.CourseId == g.Key.CourseId)
-                                                           .Select(x => x.Mark).FirstOrDefault(),
-                                          PreboardMarks = g.Where(x => x.ExamTypeId == 2 && x.CourseId == g.Key.CourseId)
-                                                           .Select(x => x.Mark).FirstOrDefault(),
-                                          WeightedMarks = (0.4 * g.Where(x => x.ExamTypeId == 1 && x.CourseId == g.Key.CourseId)
-                                                                   .Select(x => x.Mark).FirstOrDefault()) +
-                                                          (0.6 * g.Where(x => x.ExamTypeId == 2 && x.CourseId == g.Key.CourseId)
-                                                                   .Select(x => x.Mark).FirstOrDefault())
+                                          InternalMarks = g.Where(x => x.ExamTypeId == 1).Sum(x => x.Mark),  // Sum of internal marks (ExamTypeId == 1)
+                                          PreboardMarks = g.Where(x => x.ExamTypeId == 2).Sum(x => x.Mark),  // Sum of preboard marks (ExamTypeId == 2)
+                                          WeightedMarks = (0.4 * g.Where(x => x.ExamTypeId == 1).Sum(x => x.Mark)) + // Sum of internal marks weighted by 0.4
+                                                          (0.6 * g.Where(x => x.ExamTypeId == 2).Sum(x => x.Mark))  // Sum of preboard marks weighted by 0.6
                                       }).ToListAsync();
-
             if (!trainingData.Any())
                 throw new InvalidOperationException("No data available for training.");
 
             lock (_lock)
                      {
-                var courseMapping = trainingData.Select(d => d.CourseId).Distinct()
-                                       .Select((id, index) => new { id, index })
-                                       .ToDictionary(x => x.id, x => x.index);
-                _courseMapping = courseMapping;
-
+             
 
                 double[][] inputs = trainingData.Select(d => new double[]
                                       {
                                        d.InternalMarks * 0.4,  
                                        d.PreboardMarks * 0.6,
-                                        courseMapping[d.CourseId] 
+                                      
                                          }).ToArray();
 
                 double[] outputs = trainingData.Select(d => d.WeightedMarks).ToArray();
+               
 
+                
                 Train(inputs, outputs);
+                
             }
         }
 
@@ -109,93 +99,58 @@ namespace GradeInsight.SpecificRepositories.Prediction
             return result;
         }
 
-        public async Task<object> TrainModels()
-        {
-            // Fetch training data
-            var trainingData = await (from m in _context.Marks.AsNoTracking()
-                                      join c in _context.Course.AsNoTracking() on m.CourseId equals c.CourseId
-                                      join s in _context.Semester.AsNoTracking() on c.SemesterId equals s.SemesterId
-                                      join e in _context.ExamType.AsNoTracking() on m.ExamTypeId equals e.ExamTypeId
-                                      join f in _context.Faculty.AsNoTracking() on s.FacultyId equals f.FacultyId
-                                      where m.Mark > 0
-                                      group m by new { m.StudentId, m.CourseId } into g
-                                      select new
-                                      {
-                                          StudentId = g.Key.StudentId,
-                                          CourseId = g.Key.CourseId,
-                                          InternalMarks = g.Where(x => x.ExamTypeId == 1 && x.CourseId == g.Key.CourseId)
-                                                           .Select(x => x.Mark).FirstOrDefault(),
-                                          PreboardMarks = g.Where(x => x.ExamTypeId == 2 && x.CourseId == g.Key.CourseId)
-                                                           .Select(x => x.Mark).FirstOrDefault(),
-                                          WeightedMarks = (0.4 * g.Where(x => x.ExamTypeId == 1 && x.CourseId == g.Key.CourseId)
-                                                                   .Select(x => x.Mark).FirstOrDefault()) +
-                                                          (0.6 * g.Where(x => x.ExamTypeId == 2 && x.CourseId == g.Key.CourseId)
-                                                                   .Select(x => x.Mark).FirstOrDefault())
-                                      }).ToListAsync();
+       
 
-            // Check if no data is found
-            if (!trainingData.Any())
-                throw new InvalidOperationException("No data available for training.");
-
-            // Lock and create the course mapping
-            lock (_lock)
-            {
-                var courseMapping = trainingData.Select(d => d.CourseId).Distinct()
-                                               .Select((id, index) => new { id, index })
-                                               .ToDictionary(x => x.id, x => x.index);
-                _courseMapping = courseMapping;
-
-                // Prepare inputs (InternalMarks and PreboardMarks with weights) and outputs (WeightedMarks)
-                double[][] inputs = trainingData.Select(d => new double[]
-                {
-            d.InternalMarks * 0.4,  
-            d.PreboardMarks * 0.6,  
-            courseMapping[d.CourseId] 
-                }).ToArray();
-
-                double[] outputs = trainingData.Select(d => d.WeightedMarks).ToArray();
-
-              
-
-                // Return the training data, including the mappings and the processed dataset
-                return new
-                {
-                    TrainingData = trainingData,
-                    CourseMapping = _courseMapping,
-                    Inputs = inputs,
-                    Outputs = outputs
-                };
-            }
-        }
-
-        public  Task<double> PredictMarks(PredictionInitialDataViewModel input)
+        public  Task<object> PredictMarks(PredictionInitialDataViewModel input)
         {
             lock (_lock)
             {
                 if (_coefficients == null)
                     throw new InvalidOperationException("Model has not been trained yet.");
 
+            }
+
                 double[] inputData = new double[]
                 {
-            input.InternalMarks * 0.4,
-            input.PreboardMarks * 0.6,
-             _courseMapping[input.CourseId]
+                 input.InternalMarks * 0.4,
+                  input.PreboardMarks * 0.6,
+             
                 };
 
               
 
                 // Fetch the course name from the database
-                var courseName = _context.Course
-                                         .Where(c => c.CourseId == input.CourseId)
-                                         .Select(c => c.CourseName)
-                                         .FirstOrDefault();
+                
 
                 double predictedMarks = Predict(inputData);
+                var internalMarks =  _context.Marks
+                           .Where(m => m.StudentId == input.StudentId && m.ExamTypeId == 1)
+                           .Sum(m => m.Mark);
 
+                var preboardMarks = _context.Marks
+                                    .Where(m => m.StudentId == input.StudentId && m.ExamTypeId == 2)
+                                    .Sum(m => m.Mark);
 
+            // If no marks found, return 422 (Unprocessable Entity)
 
-                return Task.FromResult(predictedMarks);
+            if (internalMarks == 0 && preboardMarks == 0)
+            {
+                return Task.FromResult<object>(new { Message = "Actual marks not found." });
             }
+
+            // Calculate MAE (Mean Absolute Error)
+            double actualMarks = internalMarks + preboardMarks;
+            double mae = Math.Abs(predictedMarks - actualMarks);
+
+            // Compute Accuracy as: Accuracy = (1 - (MAE / Actual Marks)) * 100
+            double accuracy = actualMarks > 0 ? (1 - (mae / actualMarks)) * 100 : 0;
+
+            return Task.FromResult<object>(new
+            {
+                PredictedMarks = predictedMarks,
+                Accuracy = accuracy
+            });
+
         }
 
 

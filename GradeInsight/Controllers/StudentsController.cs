@@ -135,7 +135,7 @@ namespace GradeInsight.Controllers
         }
 
         [HttpPost("predict")]
-        public async Task<IActionResult> Predict(PredictionInitialDataViewModel inputData)
+        public async Task<object> Predict(PredictionInitialDataViewModel inputData)
         {
             var predictedMarks = await _predictionRepositories.PredictMarks(inputData);
             return Ok(new { predictedMarks });
