@@ -7,7 +7,7 @@
         public DateTime DateCreated { get; set; }
       
         public required string UserName { get; set; }
-        public required string UserPassword { get; set; }
+        public  string? UserPassword { get; set; }
         public required string UserFullName { get; set; }
         public required string UserEmail { get; set; }
     }

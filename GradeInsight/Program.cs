@@ -8,6 +8,9 @@ using GradeInsight.SpecificRepositories.Teachers;
 using GradeInsight.SpecificRepositories.Courses;
 using GradeInsight.SpecificRepositories.Students;
 using GradeInsight.SpecificRepositories.Prediction;
+using GradeInsight.SpecificRepositories.UserRepositories;
+using GradeInsight.SpecificRepositories.UserRepositories.cs;
+using GradeInsight;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +26,8 @@ builder.Services.AddScoped<ITeachersRepositories,TeachersRepositories>();
 builder.Services.AddScoped<ICoursesRepositories,CoursesRepositories>();
 builder.Services.AddScoped<IStudentsRepositories,StudentsRepositories>();
 builder.Services.AddScoped<IPredictionRepositories,PredictionRepositories>();
+builder.Services.AddScoped<IUserRepositories,UserRepositories>();
+
 
 builder.Services.AddCors(options =>
 {
@@ -42,6 +47,7 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 app.UseCors(options=>options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+BasePageModel.APIKey = builder.Configuration.GetSection("EnvironmentSettings:APIKey").Value;
 
 
 app.UseAuthorization();
