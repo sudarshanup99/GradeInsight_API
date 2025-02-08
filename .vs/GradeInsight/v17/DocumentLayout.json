@@ -3,88 +3,100 @@
   "WorkspaceRootPath": "E:\\GradeInsight\\GradeInsight_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\specificrepositories\\prediction\\predictionrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\specificrepositories\\prediction\\predictionrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\specificrepositories\\prediction\\ipredictionrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\specificrepositories\\prediction\\ipredictionrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\viewmodel\\predictioninitialdataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\viewmodel\\predictioninitialdataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\specificrepositories\\students\\studentsrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\specificrepositories\\students\\studentsrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\viewmodel\\resultdatavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\viewmodel\\resultdatavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\viewmodel\\marksdatavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\viewmodel\\marksdatavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\model\\marks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\model\\marks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\specificrepositories\\marks\\marksrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\specificrepositories\\marks\\marksrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\utilities\\hashingandverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\utilities\\hashingandverification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\specificrepositories\\marks\\imarksrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\specificrepositories\\marks\\imarksrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\basepagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\basepagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\controllers\\markscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\controllers\\markscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\utilities\\apikeyauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\utilities\\apikeyauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\model\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\model\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\gradeinsight.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\gradeinsight.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\specificrepositories\\userrepositories\\iuserrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\specificrepositories\\userrepositories\\iuserrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\specificrepositories\\userrepositories\\userrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\specificrepositories\\userrepositories\\userrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\data\\gradeinsightcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\data\\gradeinsightcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\specificrepositories\\prediction\\predictionrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\specificrepositories\\prediction\\predictionrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\controllers\\semesterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\controllers\\semesterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\viewmodel\\predictioninitialdataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\viewmodel\\predictioninitialdataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\specificrepositories\\prediction\\ipredictionrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\specificrepositories\\prediction\\ipredictionrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\specificrepositories\\marks\\marksrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\specificrepositories\\marks\\marksrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\model\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\model\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\controllers\\teacherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\controllers\\teacherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\controllers\\usertypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\controllers\\usertypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\controllers\\examtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\controllers\\examtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\controllers\\facultiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\controllers\\facultiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\controllers\\teacherxcoursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\controllers\\teacherxcoursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\model\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\model\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\model\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\model\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\model\\examtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\model\\examtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|e:\\gradeinsight\\gradeinsight_api\\gradeinsight\\model\\teacherxcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7297AA88-9EA0-4057-86F3-30B89A5A8549}|GradeInsight\\GradeInsight.csproj|solutionrelative:gradeinsight\\model\\teacherxcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -103,235 +115,143 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "StudentsRepositories.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Students\\StudentsRepositories.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\SpecificRepositories\\Students\\StudentsRepositories.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Students\\StudentsRepositories.cs",
-              "RelativeToolTip": "GradeInsight\\SpecificRepositories\\Students\\StudentsRepositories.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T02:33:48.381Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PredictionRepositories.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Prediction\\PredictionRepositories.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\SpecificRepositories\\Prediction\\PredictionRepositories.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Prediction\\PredictionRepositories.cs",
-              "RelativeToolTip": "GradeInsight\\SpecificRepositories\\Prediction\\PredictionRepositories.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T08:39:03.892Z",
+              "Title": "GradeInsight.http",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\GradeInsight.http",
+              "RelativeDocumentMoniker": "GradeInsight\\GradeInsight.http",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\GradeInsight.http",
+              "RelativeToolTip": "GradeInsight\\GradeInsight.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-02-08T05:10:21.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Marks.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\Marks.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Model\\Marks.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\Marks.cs",
-              "RelativeToolTip": "GradeInsight\\Model\\Marks.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:51:36.707Z"
+              "DocumentIndex": 5,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "GradeInsight\\appsettings.Development.json",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\appsettings.Development.json*",
+              "RelativeToolTip": "GradeInsight\\appsettings.Development.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-08T05:09:14.866Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IPredictionRepositories.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Prediction\\IPredictionRepositories.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\SpecificRepositories\\Prediction\\IPredictionRepositories.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Prediction\\IPredictionRepositories.cs",
-              "RelativeToolTip": "GradeInsight\\SpecificRepositories\\Prediction\\IPredictionRepositories.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T08:39:42.158Z"
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\appsettings.json",
+              "RelativeDocumentMoniker": "GradeInsight\\appsettings.json",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\appsettings.json",
+              "RelativeToolTip": "GradeInsight\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-08T04:42:00.146Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StudentsController.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\StudentsController.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\StudentsController.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\StudentsController.cs",
-              "RelativeToolTip": "GradeInsight\\Controllers\\StudentsController.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAqwHgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-05T04:03:18.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "PredictionInitialDataViewModel.cs",
               "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\ViewModel\\PredictionInitialDataViewModel.cs",
               "RelativeDocumentMoniker": "GradeInsight\\ViewModel\\PredictionInitialDataViewModel.cs",
               "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\ViewModel\\PredictionInitialDataViewModel.cs",
               "RelativeToolTip": "GradeInsight\\ViewModel\\PredictionInitialDataViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T08:46:51.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MarksDataVM.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\ViewModel\\MarksDataVM.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\ViewModel\\MarksDataVM.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\ViewModel\\MarksDataVM.cs",
-              "RelativeToolTip": "GradeInsight\\ViewModel\\MarksDataVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T18:02:15.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ResultDataVM.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\ViewModel\\ResultDataVM.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\ViewModel\\ResultDataVM.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\ViewModel\\ResultDataVM.cs",
-              "RelativeToolTip": "GradeInsight\\ViewModel\\ResultDataVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T18:02:22.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IMarksRepositories.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Marks\\IMarksRepositories.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\SpecificRepositories\\Marks\\IMarksRepositories.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Marks\\IMarksRepositories.cs",
-              "RelativeToolTip": "GradeInsight\\SpecificRepositories\\Marks\\IMarksRepositories.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T03:41:05.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Program.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Program.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Program.cs",
-              "RelativeToolTip": "GradeInsight\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-05T04:17:17.41Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MarksRepositories.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Marks\\MarksRepositories.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\SpecificRepositories\\Marks\\MarksRepositories.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Marks\\MarksRepositories.cs",
-              "RelativeToolTip": "GradeInsight\\SpecificRepositories\\Marks\\MarksRepositories.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAmwBcAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T18:03:31.809Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MarksController.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\MarksController.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\MarksController.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\MarksController.cs",
-              "RelativeToolTip": "GradeInsight\\Controllers\\MarksController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwCMAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T19:11:15.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "GradeInsightContext.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Data\\GradeInsightContext.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Data\\GradeInsightContext.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Data\\GradeInsightContext.cs",
-              "RelativeToolTip": "GradeInsight\\Data\\GradeInsightContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T16:26:06.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SemestersController.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\SemestersController.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\SemestersController.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\SemestersController.cs",
-              "RelativeToolTip": "GradeInsight\\Controllers\\SemestersController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T16:24:55.164Z"
+              "WhenOpened": "2025-02-07T07:28:58.491Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\UsersController.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "GradeInsight\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwEwAAAAIAAAAAAAAAA==",
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\StudentsController.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "GradeInsight\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T16:17:20.375Z"
+              "WhenOpened": "2025-02-07T07:22:21.03Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\User.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Model\\User.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\User.cs",
-              "RelativeToolTip": "GradeInsight\\Model\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "Title": "UserType.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\UserType.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Model\\UserType.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\UserType.cs",
+              "RelativeToolTip": "GradeInsight\\Model\\UserType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:59:21.524Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Semester.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\Semester.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Model\\Semester.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\Semester.cs",
-              "RelativeToolTip": "GradeInsight\\Model\\Semester.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T10:42:10.881Z"
+              "WhenOpened": "2025-02-07T04:05:56.559Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "Teacher.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\Teacher.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Model\\Teacher.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\Teacher.cs",
-              "RelativeToolTip": "GradeInsight\\Model\\Teacher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "UserTypesController.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\UserTypesController.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\UserTypesController.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\UserTypesController.cs",
+              "RelativeToolTip": "GradeInsight\\Controllers\\UserTypesController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T09:49:56.719Z"
+              "WhenOpened": "2025-02-07T03:49:21.844Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Course.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\Course.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Model\\Course.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\Course.cs",
-              "RelativeToolTip": "GradeInsight\\Model\\Course.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "TeacherxCoursesController.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\TeacherxCoursesController.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\TeacherxCoursesController.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\TeacherxCoursesController.cs",
+              "RelativeToolTip": "GradeInsight\\Controllers\\TeacherxCoursesController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T09:42:02.422Z"
+              "WhenOpened": "2025-02-07T03:47:20.562Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "TeachersController.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\TeachersController.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\TeachersController.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\TeachersController.cs",
+              "RelativeToolTip": "GradeInsight\\Controllers\\TeachersController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAwGwAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:43:50.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Program.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Program.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Program.cs*",
+              "RelativeToolTip": "GradeInsight\\Program.cs*",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAADEAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:39:27.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FacultiesController.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\FacultiesController.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\FacultiesController.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\FacultiesController.cs",
+              "RelativeToolTip": "GradeInsight\\Controllers\\FacultiesController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowFIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:35:49.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "Faculty.cs",
               "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\Faculty.cs",
               "RelativeDocumentMoniker": "GradeInsight\\Model\\Faculty.cs",
@@ -339,19 +259,159 @@
               "RelativeToolTip": "GradeInsight\\Model\\Faculty.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T09:41:58.038Z"
+              "WhenOpened": "2025-02-07T03:35:45.045Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ExamType.cs",
-              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\ExamType.cs",
-              "RelativeDocumentMoniker": "GradeInsight\\Model\\ExamType.cs",
-              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\ExamType.cs",
-              "RelativeToolTip": "GradeInsight\\Model\\ExamType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "TeacherxCourse.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\TeacherxCourse.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Model\\TeacherxCourse.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\TeacherxCourse.cs",
+              "RelativeToolTip": "GradeInsight\\Model\\TeacherxCourse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T07:42:50.49Z"
+              "WhenOpened": "2025-02-07T03:35:17.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ExamTypesController.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\ExamTypesController.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\ExamTypesController.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\ExamTypesController.cs",
+              "RelativeToolTip": "GradeInsight\\Controllers\\ExamTypesController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:34:19.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MarksRepositories.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Marks\\MarksRepositories.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\SpecificRepositories\\Marks\\MarksRepositories.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Marks\\MarksRepositories.cs",
+              "RelativeToolTip": "GradeInsight\\SpecificRepositories\\Marks\\MarksRepositories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:15:36.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PredictionRepositories.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Prediction\\PredictionRepositories.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\SpecificRepositories\\Prediction\\PredictionRepositories.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Prediction\\PredictionRepositories.cs",
+              "RelativeToolTip": "GradeInsight\\SpecificRepositories\\Prediction\\PredictionRepositories.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:15:32.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IPredictionRepositories.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Prediction\\IPredictionRepositories.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\SpecificRepositories\\Prediction\\IPredictionRepositories.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\Prediction\\IPredictionRepositories.cs",
+              "RelativeToolTip": "GradeInsight\\SpecificRepositories\\Prediction\\IPredictionRepositories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:15:30.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IUserRepositories.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\UserRepositories\\IUserRepositories.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\SpecificRepositories\\UserRepositories\\IUserRepositories.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\UserRepositories\\IUserRepositories.cs",
+              "RelativeToolTip": "GradeInsight\\SpecificRepositories\\UserRepositories\\IUserRepositories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:15:14.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserRepositories.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\UserRepositories\\UserRepositories.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\SpecificRepositories\\UserRepositories\\UserRepositories.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\SpecificRepositories\\UserRepositories\\UserRepositories.cs",
+              "RelativeToolTip": "GradeInsight\\SpecificRepositories\\UserRepositories\\UserRepositories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:11:49.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Controllers\\UsersController.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "GradeInsight\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAwFcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:10:07.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\User.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Model\\User.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Model\\User.cs",
+              "RelativeToolTip": "GradeInsight\\Model\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:10:03.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HashingAndVerification.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Utilities\\HashingAndVerification.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Utilities\\HashingAndVerification.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Utilities\\HashingAndVerification.cs",
+              "RelativeToolTip": "GradeInsight\\Utilities\\HashingAndVerification.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAuwDgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T03:06:34.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BasePageModel.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\BasePageModel.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\BasePageModel.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\BasePageModel.cs",
+              "RelativeToolTip": "GradeInsight\\BasePageModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T02:59:44.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApiKeyAuth.cs",
+              "DocumentMoniker": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Utilities\\ApiKeyAuth.cs",
+              "RelativeDocumentMoniker": "GradeInsight\\Utilities\\ApiKeyAuth.cs",
+              "ToolTip": "E:\\GradeInsight\\GradeInsight_API\\GradeInsight\\Utilities\\ApiKeyAuth.cs",
+              "RelativeToolTip": "GradeInsight\\Utilities\\ApiKeyAuth.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAewCUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T02:56:21.226Z",
+              "EditorCaption": ""
             }
           ]
         }

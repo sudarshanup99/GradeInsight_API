@@ -1,5 +1,25 @@
 [
   {
+    "ContainingType": "GradeInsight.Controllers.UsersController",
+    "Method": "GetAuthLogin",
+    "RelativePath": "api/authLogin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "GradeInsight.Model.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GradeInsight.Controllers.CoursesController",
     "Method": "GetCourse",
     "RelativePath": "api/Courses",
@@ -741,9 +761,35 @@
   },
   {
     "ContainingType": "GradeInsight.Controllers.StudentsController",
+    "Method": "Predict",
+    "RelativePath": "api/Students/predict",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inputData",
+        "Type": "GradeInsight.ViewModel.PredictionInitialDataViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GradeInsight.Controllers.StudentsController",
     "Method": "GetStudentCount",
     "RelativePath": "api/Students/studentCount",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GradeInsight.Controllers.StudentsController",
+    "Method": "TrainModel",
+    "RelativePath": "api/Students/trainModel",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
