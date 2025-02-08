@@ -144,11 +144,13 @@ namespace GradeInsight.Controllers
         public async Task<ActionResult<Marks>> PostMarks(Marks marks)
         {
             var existingMark = await _context.Marks
-        .FirstOrDefaultAsync(m => m.StudentId == marks.StudentId && m.CourseId == marks.CourseId);
+        .FirstOrDefaultAsync(m => m.StudentId == marks.StudentId
+                               && m.CourseId == marks.CourseId
+                               && m.ExamTypeId == marks.ExamTypeId);
 
             if (existingMark != null)
             {
-                return BadRequest("Marks for this student in the selected course already exist.");
+                return BadRequest("Marks for this student in the selected course and exam type already exist.");
             }
 
             marks.DateCreated = DateTime.Now;
