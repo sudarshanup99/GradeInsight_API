@@ -83,6 +83,10 @@ namespace GradeInsight.Controllers
             existingUser.UserName = user.UserName;
             existingUser.UserEmail = user.UserEmail;
             existingUser.UserFullName = user.UserFullName;
+            existingUser.UserTypeId = user.UserTypeId;
+            // Update only the fields that are provided
+
+
 
             try
             {
